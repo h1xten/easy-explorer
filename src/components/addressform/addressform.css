@@ -1,0 +1,10 @@
+.address__form{
+    display: flex;
+}
+.address__inp {
+    min-width: 250px;
+    margin-right: 70px;
+}
+.address__select {
+    margin-right: 50px;
+}

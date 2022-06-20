@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    user-select: none;
+    width: 100%;
+    align-items: center;
+    min-height: 8vh;
+    letter-spacing: 2.5px;
+    color: var(--primary-text);
+    /* background-color: var(--primary-bg); */
+}
+.navbar__content {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+}

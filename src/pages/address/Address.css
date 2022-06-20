@@ -1,0 +1,13 @@
+.address__content{
+    user-select: none;
+    height: 70vh;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-text);
+    font-style: italic;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
