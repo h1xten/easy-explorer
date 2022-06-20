@@ -57,13 +57,10 @@ const addressSlice = createSlice({
         },
         [getAddressInfo.rejected]: (state, action) => {
             state.status = 'rejected';
-            state.address = null
-            state.tokens = null
             state.error = action.payload;
         },
 
         [getAddressTransactions.pending]: (state) => {
-            state.transactions = null
             state.status = 'loading';
             state.error = null;
         },
@@ -72,7 +69,6 @@ const addressSlice = createSlice({
             state.status = 'resolved';
         },
         [getAddressTransactions.rejected]: (state, action) => {
-            state.transactions = null
             state.status = 'rejected';
             state.error = action.payload;
         },
