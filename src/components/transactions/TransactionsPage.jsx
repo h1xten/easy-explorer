@@ -4,7 +4,7 @@ import TransList from './TransList'
 
 
 const TransactionsPage = ({trans}) => {
-    const transactions = trans.items
+    const transactions = trans
     const [currentPage, setCurrentPage] = useState(1)
     const transPerPage = 10
 
