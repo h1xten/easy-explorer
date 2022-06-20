@@ -7,10 +7,9 @@ const TransactionsPage = ({trans}) => {
     const transactions = trans
     const [currentPage, setCurrentPage] = useState(1)
     const transPerPage = 10
-
     const lastTransIndex = currentPage * transPerPage
     const firstTransIndex = lastTransIndex - transPerPage
-    const currentTrans = transactions.slice(firstTransIndex, lastTransIndex)
+    const currentTrans = transactions? transactions.slice(firstTransIndex, lastTransIndex) : null
    
     const paginate = pageNumber => setCurrentPage(pageNumber)
     
