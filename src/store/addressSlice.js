@@ -68,7 +68,7 @@ const addressSlice = createSlice({
             state.error = null;
         },
         [getAddressTransactions.fulfilled]: (state, action) => {
-            state.transactions = action.payload.data
+            state.transactions = action.payload.data.items
             state.status = 'resolved';
         },
         [getAddressTransactions.rejected]: (state, action) => {
