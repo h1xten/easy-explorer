@@ -1,10 +1,18 @@
-.address__form{
+.address__form {
     display: flex;
 }
 .address__inp {
-    min-width: 250px;
-    margin-right: 70px;
+    min-width: 600px;
 }
 .address__select {
-    margin-right: 50px;
+    min-width: 200px;
+    letter-spacing: 0;
+}
+.search__btn {
+    background-color: var(--primary-text) !important;
+    border-color: var(--primary-text) !important;
+}
+.search__btn:hover{
+    background-color: #df3666 !important;
+    border-color: #df3666 !important ;
 }

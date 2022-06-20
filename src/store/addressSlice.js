@@ -17,10 +17,26 @@ export const getAddressInfo = createAsyncThunk(
     }
 )
 
+export const getAddressTransactions = createAsyncThunk(
+    'address/getAddressTransactions',
+    async function ({chain_id, address}, {rejectWithValue}) {
+        try {
+            const response = await axios.get(`${API_URL}${chain_id}/address/${address}/transactions_v2/?quote-currency=USD&format=JSON&no-logs=true&block-signed-at-asc=false&key=${ckey}`)
+            if(response.status !== 200) {
+                throw new Error('Server Error')
+            }
+            return response.data
+        } catch (error) {
+            return rejectWithValue(error.message)
+        }
+    }
+)
+
 const addressSlice = createSlice({
     name: 'address',
     initialState: {
         address: null,
+        chain_id: null,
         tokens: null,
         transactions: null,
         status: null,
@@ -37,11 +53,27 @@ const addressSlice = createSlice({
             state.address = action.payload.data.address
             state.status = 'resolved';
             state.tokens = action.payload.data.items;
+            state.chain_id = action.payload.data.chain_id
         },
         [getAddressInfo.rejected]: (state, action) => {
             state.status = 'rejected';
             state.address = null
             state.tokens = null
+            state.error = action.payload;
+        },
+
+        [getAddressTransactions.pending]: (state) => {
+            state.transactions = null
+            state.status = 'loading';
+            state.error = null;
+        },
+        [getAddressTransactions.fulfilled]: (state, action) => {
+            state.transactions = action.payload.data
+            state.status = 'resolved';
+        },
+        [getAddressTransactions.rejected]: (state, action) => {
+            state.transactions = null
+            state.status = 'rejected';
             state.error = action.payload;
         },
     }

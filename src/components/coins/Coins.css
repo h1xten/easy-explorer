@@ -1,0 +1,19 @@
+.coin {
+    display: flex;
+    align-items: center;
+}
+.tokens__select {
+    min-width: 350px;
+}
+.token__options > p {
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    margin: 0;
+}
+.token__option__content {
+    display: flex;
+    align-items: center;
+}
+.token__option__content > img {
+    margin-right: 10px;
+}

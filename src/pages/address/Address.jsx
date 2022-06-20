@@ -1,14 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { useLocation, Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import './Address.css'
 
 const Address = () => {
-    const location = useLocation();
     const address = useSelector( state => state.address.address );
  
     if(address){
-        return <Navigate to = '/' state={{from: location}}/>
+        return <Navigate to = '/' />
     }
 
   return (
