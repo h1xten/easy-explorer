@@ -1,17 +1,25 @@
 .navbar {
+    position: relative;
     display: flex;
     user-select: none;
     width: 100%;
     align-items: center;
     min-height: 8vh;
     letter-spacing: 2.5px;
-    color: var(--primary-text);
-    /* background-color: var(--primary-bg); */
-    box-shadow: 0px 0px 12px 4px rgba(0, 4, 38, 0.3);
+    color: var(--primary-color);
+    box-shadow: var(--dark-shadow); 
 }
 .navbar__content {
     display: flex;
     justify-content:space-between;
     align-items: center;
     width: 100%;
+}
+.navbar__switch {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+}
+.ant-switch-checked {
+    background: var(--primary-color) !important;
 }

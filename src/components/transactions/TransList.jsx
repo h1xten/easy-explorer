@@ -1,10 +1,11 @@
 import React from 'react'
 
 const TransList = ({trans}) => {
-
+    const length = trans.length
   return (
-    <div>
-        <table className="table table-hover table-borderless table-sm" id='table_of_transactions'>
+    <>
+        {length > 0 ?
+            <table className="table table-hover table-borderless table-sm" id='table_of_transactions'>
             <thead className='table_bg'>
                 <tr>
                     <th scope='col'>Txs Hash</th>
@@ -28,7 +29,10 @@ const TransList = ({trans}) => {
                  )}
             </tbody>
         </table>
-    </div>
+        :
+        <div><p className='not_found_text'>Transactions Not Found</p></div>
+        }
+    </>
   )
 }
 

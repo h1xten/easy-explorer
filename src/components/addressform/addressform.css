@@ -1,6 +1,9 @@
 .address__form {
     display: flex;
 }
+.address__form:not(:last-child){
+    
+}
 .address__inp {
     min-width: 600px;
 }
@@ -9,10 +12,10 @@
     letter-spacing: 0;
 }
 .search__btn {
-    background-color: var(--primary-text) !important;
-    border-color: var(--primary-text) !important;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 .search__btn:hover{
-    background-color: #df3666 !important;
-    border-color: #df3666 !important ;
+    background-color: var(--hover-color) !important;
+    border-color: var(--hover-color) !important ;
 }

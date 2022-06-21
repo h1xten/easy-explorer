@@ -1,3 +1,42 @@
+.homepage {
+    color: var(--primary-text);
+}
 .transactions {
     margin-bottom: 50px;
+}
+.block__title{
+    user-select: none;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.block__line {
+    display: flex;
+}
+.block__text {
+    margin: 0;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+.loader{
+    position: fixed;
+    width: 100vw;
+    height: 92vh;
+    top: 8vh;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+}
+
+.loader123{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 48%;
 }

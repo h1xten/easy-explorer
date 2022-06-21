@@ -20,7 +20,7 @@ const AddressForm = () => {
     const handleClick = (e, chain_id, address) => {
         e.preventDefault()
         dispatch(getAddressInfo({chain_id, address}))
-            .then(dispatch(getAddressTransactions({chain_id, address})))
+        dispatch(getAddressTransactions({chain_id, address}))
     }
     const handleChain = (value) => {
         setChain(value)

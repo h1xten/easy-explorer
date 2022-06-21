@@ -38,16 +38,21 @@ const addressSlice = createSlice({
         address: null,
         chain_id: null,
         tokens: null,
+        selectedToken: null,
         transactions: null,
         status: null,
         error: null,
     },
     reducers: {
+        selectToken(state, action) {
+            state.selectedToken = action.payload
+        }
     },
     extraReducers: {
         [getAddressInfo.pending]: (state) => {
             state.status = 'loading';
             state.error = null;
+            state.selectedToken = null;
         },
         [getAddressInfo.fulfilled]: (state, action) => {
             state.address = action.payload.data.address
@@ -59,8 +64,9 @@ const addressSlice = createSlice({
             state.status = 'rejected';
             state.error = action.payload;
         },
-
+        //Transactions
         [getAddressTransactions.pending]: (state) => {
+            state.selectedToken = null;
             state.status = 'loading';
             state.error = null;
         },
@@ -74,5 +80,5 @@ const addressSlice = createSlice({
         },
     }
 })
-
+export const {selectToken} = addressSlice.actions
 export default addressSlice.reducer

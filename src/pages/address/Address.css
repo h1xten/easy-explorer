@@ -4,7 +4,7 @@
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: bold;
-    color: var(--primary-text);
+    color: var(--primary-color);
     font-style: italic;
     letter-spacing: 2px;
     display: flex;

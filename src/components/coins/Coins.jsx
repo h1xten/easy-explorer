@@ -2,8 +2,11 @@ import React from 'react'
 import { Badge, Select  } from 'antd'
 import './Coins.css'
 import { useSelector } from 'react-redux/es/exports'
+import { selectToken } from '../../store/addressSlice'
+import { useDispatch } from 'react-redux'
 
 const Coins = () => {
+    const dispatch = useDispatch()
     const {Option} = Select
     const coins = useSelector(state => state.address.tokens)
     let options = ''
@@ -24,7 +27,7 @@ const Coins = () => {
   return (
     <div className='coins'>
         <Badge count = {coins.length}>
-            <Select mode='none' className='tokens__select' placeholder = "Tokens" allowClear>
+            <Select className='tokens__select' onChange={value => dispatch(selectToken(value))} placeholder = "Tokens" allowClear>
                 {options}
             </Select>
         </Badge>
