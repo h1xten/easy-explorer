@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const getAddressInfo = createAsyncThunk(
     'address/getAddressInfo',
-    async function( {chain_id, address}, {rejectWithValue}) {
+    async function({chain_id, address}, {rejectWithValue}) {
         try {
             const response = await axios.get(`${API_URL}${chain_id}/address/${address}/balances_v2/?&key=${ckey}`)
             if(response.status !== 200){

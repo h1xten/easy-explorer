@@ -11,7 +11,6 @@ const Homepage = () => {
 
     const address = useSelector(state => state.address.address)
     const chain_id = useSelector(state => state.address.chain_id)
-    const transactions = useSelector(state => state.address.transactions)
     const chain = chains[chain_id]
     const status = useSelector(state => state.address.status)
     const token_name = useSelector(state => state.address.selectedToken)
@@ -44,7 +43,7 @@ const Homepage = () => {
             <div className='row'>
                 <div className='col-md-12'>
                     <div className="transactions page">
-                        <TransactionsPage trans = {transactions}/>
+                        <TransactionsPage/>
                     </div>
                 </div>
             </div>
