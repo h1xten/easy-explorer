@@ -5,7 +5,7 @@ const TransList = ({trans}) => {
   return (
     <>
         {length > 0 ?
-            <table className="table table-hover table-borderless table-sm" id='table_of_transactions'>
+            <table className="table table-borderless table-sm" id='table_of_transactions'>
             <thead className='table_bg'>
                 <tr>
                     <th scope='col'>Txs Hash</th>

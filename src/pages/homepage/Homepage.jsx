@@ -13,33 +13,32 @@ const Homepage = () => {
     const chain_id = useSelector(state => state.address.chain_id)
     const chain = chains[chain_id]
     const status = useSelector(state => state.address.status)
+    const transactions_status = useSelector(state => state.address.transactions_status)
     const token_name = useSelector(state => state.address.selectedToken)
 
   return (
     <div className='homepage'>
-        {status !== 'loading' 
-            ?
-            <div className='wrapper'>
-                <div className='row'>
-                    <div className='col-md-6' >
-                        <div className="page">
-                            <h5 className='block__title'>ADDRESS</h5>
-                            <div className="block__content">
-                                <div className='block__line'><p className='block__text'>Address:</p> {address} </div>
-                                <div className='block__line'><p className='block__text'>Network:</p> {chain}</div>
-                                <div className='block__line'><p className='block__text'>Tokens:</p> <Coins/></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-6'>
-                        <div className="page">
-                            {token_name ?
-                                <TokenInfo selectedToken = {token_name} />
-                                : <p className='block__title'>Token Not Selected</p>
-                            }
+        <div className='wrapper'>
+            <div className='row'>
+                <div className='col-md-6' >
+                    <div className="page">
+                        <h5 className='block__title'>ADDRESS</h5>
+                        <div className="block__content">
+                            <div className='block__line'><p className='block__text'>Address:</p> {address} </div>
+                            <div className='block__line'><p className='block__text'>Network:</p> {chain}</div>
+                            <div className='block__line'><p className='block__text'>Tokens:</p> <Coins/></div>
                         </div>
                     </div>
                 </div>
+                <div className='col-md-6'>
+                    <div className="page">
+                        {token_name ?
+                            <TokenInfo selectedToken = {token_name} />
+                            : <p className='block__title'>Token Not Selected</p>
+                        }
+                    </div>
+                </div>
+            </div>
             <div className='row'>
                 <div className='col-md-12'>
                     <div className="transactions page">
@@ -48,9 +47,6 @@ const Homepage = () => {
                 </div>
             </div>
         </div>
-            :
-            <div className = 'loader'> <Watch ariaLabel='watch-loading' height= "80px" width="80px" color='var(--primary-color)'/></div>
-        }
     </div>
   )
 }

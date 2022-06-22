@@ -5,7 +5,8 @@ export const useTheme = () => {
     useLayoutEffect(() => {
         document.documentElement.setAttribute('data-theme', theme)
         localStorage.setItem('app-theme', theme)
-        theme === 'dark' ? document.getElementById('switcher').classList.add('ant-switch-checked')
+        theme === 'dark' 
+            ? document.getElementById('switcher').classList.add('ant-switch-checked')
             : document.getElementById('switcher').classList.remove('ant-switch-checked')
     }, [theme])
 
