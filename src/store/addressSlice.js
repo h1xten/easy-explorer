@@ -21,7 +21,7 @@ export const getAddressTransactions = createAsyncThunk(
     'address/getAddressTransactions',
     async function ({chain_id, address}, {rejectWithValue}) {
         try {
-            const response = await axios.get(`${API_URL}${chain_id}/address/${address}/transactions_v2/?quote-currency=USD&format=JSON&no-logs=true&page-size=1000&block-signed-at-asc=false&key=${ckey}`)
+            const response = await axios.get(`${API_URL}${chain_id}/address/${address}/transactions_v2/?quote-currency=USD&format=JSON&no-logs=true&page-size=500&block-signed-at-asc=false&key=${ckey}`)
             if(response.status !== 200) {
                 throw new Error('Server Error')
             }

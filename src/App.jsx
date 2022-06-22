@@ -16,7 +16,7 @@ function App() {
                             <Homepage />
                     </RequireAddress>
                 } />
-                <Route path='/address' element = {<Address/>} />
+                <Route path='address' element = {<Address/>} />
             </Route>
         </Routes>
     </BrowserRouter>
