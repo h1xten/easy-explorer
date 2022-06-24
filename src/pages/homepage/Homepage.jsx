@@ -4,17 +4,22 @@ import { useSelector } from 'react-redux'
 import Coins from '../../components/coins/Coins'
 import { chains } from '../../config'
 import TransactionsPage from '../../components/transactions/TransactionsPage'
-import { Watch } from 'react-loader-spinner'
 import TokenInfo from '../../components/tokenInfo/TokenInfo'
+import InfoRow from '../../components/transactions/transaction/InfoRow'
 
 const Homepage = () => {
 
     const address = useSelector(state => state.address.address)
     const chain_id = useSelector(state => state.address.chain_id)
+    const tokens = useSelector(state => state.address.tokens)
     const chain = chains[chain_id]
-    const status = useSelector(state => state.address.status)
-    const transactions_status = useSelector(state => state.address.transactions_status)
     const token_name = useSelector(state => state.address.selectedToken)
+
+    let balance = 0
+    tokens.forEach(e => {
+        balance += e.quote
+    });
+
 
   return (
     <div className='homepage'>
@@ -24,9 +29,10 @@ const Homepage = () => {
                     <div className="page">
                         <h5 className='block__title'>ADDRESS</h5>
                         <div className="block__content">
-                            <div className='block__line'><p className='block__text'>Address:</p> {address} </div>
-                            <div className='block__line'><p className='block__text'>Network:</p> {chain}</div>
-                            <div className='block__line'><p className='block__text'>Tokens:</p> <Coins/></div>
+                            <InfoRow title= 'Address:' value={address} />
+                            <InfoRow title= 'Network:' value={chain} />
+                            <InfoRow title= 'Tokens Value:' value={ '$ ' + balance.toFixed(2)} />
+                            <InfoRow title= 'Tokens:' value={<Coins />} />
                         </div>
                     </div>
                 </div>

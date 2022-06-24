@@ -29,7 +29,7 @@ const AddressForm = () => {
   return (
     <div className='address__form'>
         <Input className='address__inp' value={address} onChange={(e) => setAddress(e.target.value)} placeholder='Address'/>
-        <Select className='address__select' placeholder = 'Choose network' value={chain} onChange={handleChain} allowClear >
+        <Select className='address__select' placeholder = 'Network' value={chain} onChange={handleChain} allowClear >
             {options}
         </Select>
         <Button className='search__btn' type='primary' onClick={(e) => handleClick(e, chain, address)} > <SearchOutlined width='10px' height='10px' className='search__icon' /> </Button>

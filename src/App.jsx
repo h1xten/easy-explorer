@@ -5,6 +5,7 @@ import Address from './pages/address/Address';
 import RequireAddress from './hoc/RequireAddress';
 import 'antd/dist/antd.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Transaction from './components/transactions/transaction/Transaction';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                             <Homepage />
                     </RequireAddress>
                 } />
+                <Route path = 'transaction/:hash' element = { <Transaction/>} />
                 <Route path='address' element = {<Address/>} />
             </Route>
         </Routes>

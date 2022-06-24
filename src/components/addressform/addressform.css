@@ -1,15 +1,19 @@
 .address__form {
     display: flex;
 }
-.address__form:not(:last-child){
-    
-}
 .address__inp {
-    min-width: 600px;
+    margin-right: 20px !important;
 }
 .address__select {
     min-width: 200px;
     letter-spacing: 0;
+    margin-right: 20px !important;
+}
+.address__inp::placeholder{
+    color: var(--primary-color) !important;
+}
+.ant-select-selection-placeholder {
+    color: var(--primary-color) !important;
 }
 .search__btn {
     background-color: var(--primary-color) !important;

@@ -3,7 +3,7 @@
     align-items: center;
 }
 .tokens__select {
-    min-width: 350px;
+    width: 350px;
 }
 .token__options > p {
     letter-spacing: 0.5px;

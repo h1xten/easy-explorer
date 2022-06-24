@@ -8,7 +8,11 @@ html {
     height: 100%;
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
+    color: var(--primary-color) !important;
+}
+a:hover{
+    border-bottom: 1px solid var(--primary-color);
 }
 
 li {
@@ -34,7 +38,7 @@ body {
 }
 .page {
     margin-top: 4vh;
-    min-height: 300px;
+    min-height: 330px;
     border-radius: 15px;
     padding: 30px;
     box-shadow: var(--light-shadow);

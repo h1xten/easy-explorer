@@ -6,7 +6,7 @@
 }
 .block__title{
     user-select: none;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 15px;
