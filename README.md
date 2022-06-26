@@ -12,6 +12,9 @@ Developed with
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Covalent Blockchain Data API](https://www.covalenthq.com/docs/developer/)
 
+## Covalent API Endpoints
+- /v1/:chain_id/address/:address/balances_v2/  - Get token balances for address
+- /v1/:chain_id/address/:address/transactions_v2/  - Get transactions for address
 
 ## Usage
 - [dApp Demo Site](https://easy-explorer.vercel.app/)
