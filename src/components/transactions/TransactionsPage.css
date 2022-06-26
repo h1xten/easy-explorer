@@ -22,3 +22,17 @@
 .not_found_text{
     color: var(--primary-color);
 }
+.trans_title {
+    display: flex;
+    align-items: center;
+}
+.trans_title > a:hover {
+    border: 0;
+}
+.trans_title_text {
+    margin: 0;
+    margin-left: 20px;
+}
+.back_arrow {
+    margin-bottom: 7px;
+}

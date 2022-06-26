@@ -3,6 +3,7 @@ import { Switch } from 'antd'
 import AddressForm from '../addressform/AddressForm'
 import {useTheme} from "../../hooks/use-theme"
 import './Navbar.css'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const {theme, setTheme} = useTheme()
@@ -12,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
         <div className='navbar__content wrapper'>
-            <div className='navbar__logo'>EasyExplorer</div>
+            <div className='navbar__logo'> <NavLink to= '/'>EasyExplorer</NavLink></div>
             <AddressForm />
         </div>
         <Switch id='switcher' className='navbar__switch' onChange={changeTheme}/>

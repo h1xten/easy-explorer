@@ -23,3 +23,6 @@
 .ant-switch-checked {
     background: var(--primary-color) !important;
 }
+.navbar__logo > a {
+    border: 0;
+}
