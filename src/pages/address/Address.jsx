@@ -13,7 +13,7 @@ const Address = () => {
   return (
     <div className='address'>
         <div className="address__content wrapper">
-            Please Enter Your Address And Choose Network
+            Please Enter Your Address And Choose a Network
         </div>
     </div>
   )
