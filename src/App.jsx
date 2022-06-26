@@ -17,7 +17,11 @@ function App() {
                             <Homepage />
                     </RequireAddress>
                 } />
-                <Route path = 'transaction/:hash' element = { <Transaction/>} />
+                <Route path = 'transaction/:hash' element = {
+                    <RequireAddress>
+                        <Transaction/>
+                    </RequireAddress>
+                } />
                 <Route path='address' element = {<Address/>} />
             </Route>
         </Routes>
