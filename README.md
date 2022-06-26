@@ -17,7 +17,7 @@ Developed with
 - /v1/:chain_id/address/:address/transactions_v2/  - Get transactions for address
 
 ## Usage
-- [dApp Demo Site](https://easy-explorer.vercel.app/)
+- [Demo App Site](https://easy-explorer.vercel.app/)
 - [Video Demo](https://www.youtube.com/watch?v=PZqpofOkA2k)
 
 ## Contacts
