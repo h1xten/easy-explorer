@@ -22,6 +22,8 @@ Developed with
 - Discord - h1xten#3783 </br>
 - [Project Repo](https://github.com/h1xten/easy-explorer)
 
+## License
+[GPLv3](LICENSE)
 
 #### Notice
 This project is not audited and should not be used in a production environment.
