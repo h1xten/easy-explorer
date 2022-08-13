@@ -5,8 +5,7 @@ import './TransactionsPage.css'
 import { useSelector } from 'react-redux'
 
 
-const TransactionsPage = () => {
-    const transactions = useSelector(state => state.address.transactions)
+const TransactionsPage = ({transactions}) => {
     const length = transactions.length !== 0 ? transactions.length : 0
     const [currentPage, setCurrentPage] = useState(1)
     const transPerPage = 10

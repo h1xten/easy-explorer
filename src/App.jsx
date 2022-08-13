@@ -12,10 +12,8 @@ function App() {
     <BrowserRouter>
         <Routes>
             <Route path='/' element = {<MainLayout/>} >
-                <Route index element = {
-                    <RequireAddress>
+                <Route path='address/:address/:chain_id' element = {
                             <Homepage />
-                    </RequireAddress>
                 } />
                 <Route path = 'transaction/:hash' element = {
                     <RequireAddress>

@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 const TransList = ({trans}) => {
     const length = trans.length
-    const chain = useSelector(state => state.address.chain_id)
   return (
     <>
         {length > 0 ?
