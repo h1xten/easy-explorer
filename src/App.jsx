@@ -13,7 +13,7 @@ function App() {
         <Routes>
             <Route path='/' element = {<MainLayout/>} >
                 <Route path='address/:address/:chain_id' element = {
-                            <Homepage />
+                    <Homepage />
                 } />
                 <Route path = 'transaction/:hash' element = {
                     <RequireAddress>
