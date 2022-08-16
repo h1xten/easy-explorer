@@ -2,11 +2,8 @@ import React, { useState } from 'react'
 import { Pagination } from 'antd'
 import TransList from './TransList'
 import './TransactionsPage.css'
-import { useSelector } from 'react-redux'
 
-
-const TransactionsPage = () => {
-    const transactions = useSelector(state => state.address.transactions)
+const TransactionsPage = ({transactions, chain}) => {
     const length = transactions.length !== 0 ? transactions.length : 0
     const [currentPage, setCurrentPage] = useState(1)
     const transPerPage = 10
@@ -17,7 +14,7 @@ const TransactionsPage = () => {
     
   return (
     <div className= { length > 0 ? 'transactions__content' : 'trans_not_found'}>
-        <TransList trans={currentTrans} />
+        <TransList trans={currentTrans} chain = {chain} />
         <Pagination hideOnSinglePage = {true} defaultCurrent={1} showSizeChanger = {false} onChange={paginate} total={length} />
     </div>
   )

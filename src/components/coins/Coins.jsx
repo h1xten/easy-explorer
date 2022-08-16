@@ -1,18 +1,16 @@
 import React from 'react'
 import { Badge, Select  } from 'antd'
 import './Coins.css'
-import { useSelector } from 'react-redux/es/exports'
-import { selectToken } from '../../store/addressSlice'
+import { selectToken } from '../../store/tokenSlice'
 import { useDispatch } from 'react-redux'
-import { QuestionCircleOutlined } from '@ant-design/icons/lib/icons'
 
-const Coins = () => {
+const Coins = ({coins}) => {
     const dispatch = useDispatch()
     const {Option} = Select
-    const coins = useSelector(state => state.address.tokens)
+    const coins_list = coins
     let options = ''
 
-    coins ? options = coins.map(coin => 
+    coins_list ? options = coins_list.map(coin => 
         <Option key={coin.contract_address} value = {coin.contract_name}>
             <span className='token__options'>
                 <p className='token__option__content'>
@@ -28,7 +26,7 @@ const Coins = () => {
             : <p>No Tokens Found</p>
   return (
     <div className='coins'>
-        <Badge count = {coins.length}>
+        <Badge count = {coins_list.length}>
             <Select className='tokens__select' onChange={value => dispatch(selectToken(value))} placeholder = "Tokens" allowClear>
                 {options}
             </Select>

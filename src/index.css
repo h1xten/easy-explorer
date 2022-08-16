@@ -44,6 +44,9 @@ body {
     box-shadow: var(--light-shadow);
     color: var(--text-color);
 }
+.loader {
+    color: var(--primary-color);
+}
 
 html[data-theme = 'light'] {
     --main-bg: rgb(255, 255, 255);
