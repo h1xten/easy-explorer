@@ -8,7 +8,10 @@ export const tokenSlice = createSlice({
     reducers: {
         selectToken(state, action) {
             state.selectedToken = action.payload
+        },
+        clearToken(state, action){
+            state.selectedToken = null
         }
     },
 })
-export const {selectToken} = tokenSlice.actions
+export const {selectToken, clearToken} = tokenSlice.actions

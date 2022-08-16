@@ -1,15 +1,24 @@
 import { ArrowLeftOutlined } from '@ant-design/icons/lib/icons'
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink, useParams, useNavigate } from 'react-router-dom'
+import { useGetTransactionQuery } from '../../../store/covalentApi'
+import Loader from '../../loader/Loader'
 import InfoRow from './InfoRow'
 
 const Transaction = () => {
-    const { hash } = useParams()
-    const tx = useSelector(state => state.address.transactions).find(trans => trans.tx_hash === hash)
+    const { hash, chain_id } = useParams()
+    const navigate = useNavigate()
+    
+    const {data: tx, isLoading, isError, error} = useGetTransactionQuery({chain_id, hash})
+    if(isLoading) return <Loader />
+    
+    const backHandle = () => {
+       
+    }
+
   return (
     <div className='transaction__datails page wrapper'>
-        <h5 className='block__title'> <div className="trans_title"> <NavLink to= '/'> <ArrowLeftOutlined className='back_arrow'/> </NavLink><p className='trans_title_text'> Transaction Details </p></div></h5>
+        <h5 className='block__title'> <div className="trans_title"> <button onClick={backHandle}> <ArrowLeftOutlined className='back_arrow'/></button><p className='trans_title_text'> Transaction Details </p></div></h5>
         <div className="block__content">
             <InfoRow title= 'Transaction Hash:' value={tx.tx_hash} />
             <InfoRow title= 'Block:' value={tx.block_height} />

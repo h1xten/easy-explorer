@@ -12,15 +12,13 @@ function App() {
     <BrowserRouter>
         <Routes>
             <Route path='/' element = {<MainLayout/>} >
-                <Route path='address/:address/:chain_id' element = {
+                <Route index element = {<Address/>} />
+                <Route path='explore/:address/:chain_id' element = {
                     <Homepage />
                 } />
-                <Route path = 'transaction/:hash' element = {
-                    <RequireAddress>
-                        <Transaction/>
-                    </RequireAddress>
+                <Route path = 'transaction/:hash/:chain_id' element = {
+                    <Transaction/>
                 } />
-                <Route path='address' element = {<Address/>} />
             </Route>
         </Routes>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
-const TransList = ({trans}) => {
+const TransList = ({trans, chain}) => {
     const length = trans.length
   return (
     <>
@@ -20,7 +20,7 @@ const TransList = ({trans}) => {
             <tbody>
                 {trans.map((trx, i) => 
                     (<tr key={i}>
-                        <td><NavLink to= {`transaction/${trx.tx_hash}`}>{(trx.tx_hash).substring(0, 15) + "..."}</NavLink></td>
+                        <td><NavLink to={`/transaction/${trx.tx_hash}/${chain}`}>{(trx.tx_hash).substring(0, 15) + "..."}</NavLink></td>
                         <td> {trx.block_height}</td>
                         <td> {(trx.block_signed_at).replace(/T|Z/g, '  ')} </td>
                         <td>{(trx.from_address).substring(0, 15) + "..."}</td>

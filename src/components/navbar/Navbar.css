@@ -4,7 +4,7 @@
     user-select: none;
     width: 100%;
     align-items: center;
-    min-height: 8vh;
+    height: 4rem;
     letter-spacing: 2.5px;
     color: var(--primary-color);
     box-shadow: var(--dark-shadow); 
@@ -16,13 +16,15 @@
     width: 100%;
 }
 .navbar__switch {
-    position: fixed;
-    top: 50%;
-    right: 15px;
+    position: absolute !important;
+    right: 20px;
 }
 .ant-switch-checked {
     background: var(--primary-color) !important;
 }
 .navbar__logo > a {
     border: 0;
+}
+.ud_login{
+    margin-left: 4rem;
 }

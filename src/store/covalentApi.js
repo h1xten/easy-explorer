@@ -20,7 +20,16 @@ export const covalentApi = createApi({
             }),
             transformResponse: (response) => response.data
         }),
+        getTransaction: builder.query({
+            query: ({chain_id, hash}) => ({
+                url: `${chain_id}/transaction_v2/${hash}/`,
+                params: {
+                    key: `${ckey}`
+                }
+            }),
+            transformResponse: (response) => response.data.items[0]
+        })
     })
 })
 
-export const {useGetAddressInfoQuery, useGetAddressTransactionsQuery} = covalentApi;
+export const {useGetAddressInfoQuery, useGetAddressTransactionsQuery, useGetTransactionQuery} = covalentApi;
