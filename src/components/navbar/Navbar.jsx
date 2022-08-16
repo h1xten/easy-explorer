@@ -3,7 +3,7 @@ import { Switch } from 'antd'
 import AddressForm from '../addressform/AddressForm'
 import {useTheme} from "../../hooks/use-theme"
 import './Navbar.css'
-import { Navigate, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const {theme, setTheme} = useTheme()

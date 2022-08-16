@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
 import Homepage from './pages/homepage/Homepage';
 import Address from './pages/address/Address';
-import RequireAddress from './hoc/RequireAddress';
 import 'antd/dist/antd.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Transaction from './components/transactions/transaction/Transaction';

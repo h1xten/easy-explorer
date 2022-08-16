@@ -13,7 +13,7 @@ const Transaction = () => {
     if(isLoading) return <Loader />
     
     const backHandle = () => {
-       
+       navigate('/')
     }
 
   return (

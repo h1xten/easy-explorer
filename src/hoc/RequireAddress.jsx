@@ -4,7 +4,6 @@ import { useLocation, Navigate } from 'react-router-dom'
 
 const RequireAddress = ({children}) => {
     const location = useLocation();
-    const addressUD = useSelector( state => state.UD.currentUD);
     const address = useSelector
 
     if(!address){

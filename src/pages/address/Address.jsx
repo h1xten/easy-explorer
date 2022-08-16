@@ -1,7 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { Navigate } from 'react-router-dom'
-import { Watch } from 'react-loader-spinner'
 import './Address.css'
 
 const Address = () => {

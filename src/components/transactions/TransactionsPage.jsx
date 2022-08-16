@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { Pagination } from 'antd'
 import TransList from './TransList'
 import './TransactionsPage.css'
-import { useSelector } from 'react-redux'
-
 
 const TransactionsPage = ({transactions, chain}) => {
     const length = transactions.length !== 0 ? transactions.length : 0
