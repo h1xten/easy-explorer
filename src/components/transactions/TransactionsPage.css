@@ -33,6 +33,9 @@
     margin: 0;
     margin-left: 20px;
 }
-.back_arrow {
-    margin-bottom: 7px;
+.btn_back {
+    background-color: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    color: var(--primary-color) !important;
 }

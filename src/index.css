@@ -37,7 +37,7 @@ body {
     box-sizing: content-box;
 }
 .page {
-    margin-top: 4vh;
+    margin-top: 2rem;
     min-height: 330px;
     border-radius: 15px;
     padding: 30px;

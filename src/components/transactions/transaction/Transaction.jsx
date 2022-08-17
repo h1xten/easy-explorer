@@ -1,6 +1,8 @@
 import { ArrowLeftOutlined } from '@ant-design/icons/lib/icons'
 import React from 'react'
+import { Button } from 'antd'
 import { NavLink, useParams, useNavigate } from 'react-router-dom'
+import {} from 'react-router-dom'
 import { useGetTransactionQuery } from '../../../store/covalentApi'
 import Loader from '../../loader/Loader'
 import InfoRow from './InfoRow'
@@ -13,12 +15,19 @@ const Transaction = () => {
     if(isLoading) return <Loader />
     
     const backHandle = () => {
-       navigate('/')
+       navigate(-1)
     }
 
   return (
     <div className='transaction__datails page wrapper'>
-        <h5 className='block__title'> <div className="trans_title"> <button onClick={backHandle}> <ArrowLeftOutlined className='back_arrow'/></button><p className='trans_title_text'> Transaction Details </p></div></h5>
+        <h5 className='block__title'> 
+            <div className="trans_title">
+                <Button className='btn_back' onClick={backHandle}>
+                    <ArrowLeftOutlined className='back_arrow'/>
+                </Button>
+                <p className='trans_title_text'> Transaction Details </p>
+            </div>
+        </h5>
         <div className="block__content">
             <InfoRow title= 'Transaction Hash:' value={tx.tx_hash} />
             <InfoRow title= 'Block:' value={tx.block_height} />

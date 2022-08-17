@@ -1,22 +1,21 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react"
-import { API_URL, ckey } from "../config"
 
 export const covalentApi = createApi({
     reducerPath: 'covalentApi',
-    baseQuery: fetchBaseQuery({baseUrl: `${API_URL}`}),
+    baseQuery: fetchBaseQuery({baseUrl: `${process.env.API_URL}`}),
     endpoints: (builder) => ({
         getAddressInfo: builder.query({
             query: ({chain_id, address}) => ({
                 url: `${chain_id}/address/${address}/balances_v2/`,
                 params: {
-                    key: `${ckey}`
+                    key: `${process.env.CKEY}`
                 }
             }),
             transformResponse: (response) => response.data
         }),
         getAddressTransactions: builder.query({
             query: ({chain_id, address}) => ({
-                url: `${chain_id}/address/${address}/transactions_v2/?quote-currency=USD&format=JSON&no-logs=true&page-size=500&block-signed-at-asc=false&key=${ckey}`,
+                url: `${chain_id}/address/${address}/transactions_v2/?quote-currency=USD&format=JSON&no-logs=true&page-size=500&block-signed-at-asc=false&key=${process.env.CKEY}`,
             }),
             transformResponse: (response) => response.data
         }),
@@ -24,7 +23,7 @@ export const covalentApi = createApi({
             query: ({chain_id, hash}) => ({
                 url: `${chain_id}/transaction_v2/${hash}/`,
                 params: {
-                    key: `${ckey}`
+                    key: `${process.env.CKEY}`
                 }
             }),
             transformResponse: (response) => response.data.items[0]
