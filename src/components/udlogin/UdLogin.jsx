@@ -5,7 +5,7 @@ import UAuth from '@uauth/js'
 import { clearUD, setCurrentUD, setUserUD } from '../../store/udSlice'
 import { Button } from 'antd'
 
-const UdLogin = ({setChain, setAddress}) => {
+const UdLogin = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     
