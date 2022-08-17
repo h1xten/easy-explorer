@@ -9,7 +9,7 @@
     letter-spacing: 0;
     margin-right: 20px !important;
 }
-.address__inp::placeholder{
+.address__inp>input::placeholder{
     color: var(--primary-color) !important;
 }
 .ant-select-selection-placeholder {

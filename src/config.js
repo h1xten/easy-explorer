@@ -1,6 +1,3 @@
-export const API_URL = "https://api.covalenthq.com/v1/"
-export const ckey = "ckey_dc8c69b6ebca49e9b356f16352f"
-
 export const chains = {
     1 : "Ethereum",
     137: "Polygon",
