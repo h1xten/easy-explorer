@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import UAuth from '@uauth/js'
 import { clearUD, setCurrentUD, setUserUD } from '../../store/udSlice'
 import { Button } from 'antd'
+import ProfileMenu from './ProfileMenu'
 
 const UdLogin = () => {
     const dispatch = useDispatch()
@@ -30,7 +31,7 @@ const UdLogin = () => {
         }
     }
 
-    const userLogOut = async () => {
+    const userLogout = async () => {
         try {
             await uauth.logout()
             dispatch(clearUD())
@@ -45,9 +46,7 @@ const UdLogin = () => {
     <div className='ud_login'>
         {userUD ? 
             <>
-                <Button type='primary' onClick={userLogOut}>
-                    Logout
-                </Button>
+                <ProfileMenu userLogout={userLogout} />
             </>
             :
             <>
