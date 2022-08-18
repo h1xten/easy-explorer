@@ -37,12 +37,15 @@ body {
     box-sizing: content-box;
 }
 .page {
-    margin-top: 4vh;
+    margin-top: 2rem;
     min-height: 330px;
     border-radius: 15px;
     padding: 30px;
     box-shadow: var(--light-shadow);
     color: var(--text-color);
+}
+.loader {
+    color: var(--primary-color);
 }
 
 html[data-theme = 'light'] {
