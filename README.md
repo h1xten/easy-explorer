@@ -28,7 +28,7 @@ Developed with
 - Discord - h1xten#3783 </br>
 - [Project Repo](https://github.com/h1xten/easy-explorer)
 - Unstoppable Domain registered account email address: h1xtenc@gmail.com
-- Person of contact: @h1xten
+- Person of contact: h1xtenc@gmail.com
 
 ## License
 [GPLv3](LICENSE)
