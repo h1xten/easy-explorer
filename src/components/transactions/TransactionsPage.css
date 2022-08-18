@@ -39,3 +39,6 @@
     padding: 0 !important;
     color: var(--primary-color) !important;
 }
+.back_arrow {
+    font-size: 21px;
+}
