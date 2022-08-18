@@ -18,18 +18,26 @@ const UdLogin = () => {
     })
     
     const unstoppableLogin = async () => {
-        const user = await uauth.loginWithPopup()
-        if (user) {
-            dispatch(setUserUD(user))
-            dispatch(setCurrentUD(user.idToken.wallet_address))
-            navigate(`explore/${user.idToken.wallet_address}/1`)
+        try {
+            const user = await uauth.loginWithPopup()
+            if (user) {
+                dispatch(setUserUD(user))
+                dispatch(setCurrentUD(user.idToken.wallet_address))
+                navigate(`explore/${user.idToken.wallet_address}/1`)
+            }
+        } catch (error) {
+            console.log(error)
         }
     }
 
     const userLogOut = async () => {
-        await uauth.logout()
-        dispatch(clearUD())
-        navigate('/')
+        try {
+            await uauth.logout()
+            dispatch(clearUD())
+            navigate('/')
+        } catch (error) {
+            console.log(error)
+        }
     }
 
 
