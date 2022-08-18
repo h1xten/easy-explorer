@@ -26,7 +26,8 @@ const UdLogin = () => {
         }
     }
 
-    const userLogOut = () => {
+    const userLogOut = async () => {
+        await uauth.logout()
         dispatch(clearUD())
         navigate('/')
     }
