@@ -21,6 +21,7 @@ Developed with
 ## Usage
 - [Demo App Site](https://easy-explorer.vercel.app/)
 - [Video Demo](https://www.youtube.com/watch?v=PZqpofOkA2k)
+- [Login With Unstoppable](https://youtu.be/RYQ5PAUURqg)
 
 ## Contacts
 - [Telegram](https://t.me/h1xten) </br>
