@@ -15,7 +15,10 @@ export const covalentApi = createApi({
         }),
         getAddressTransactions: builder.query({
             query: ({chain_id, address}) => ({
-                url: `${chain_id}/address/${address}/transactions_v2/?quote-currency=USD&format=JSON&no-logs=true&page-size=500&block-signed-at-asc=false&key=${process.env.REACT_APP_CKEY}`,
+                url: `${chain_id}/address/${address}/transactions_v2/?quote-currency=USD&format=JSON&no-logs=true&page-size=500&block-signed-at-asc=false`,
+                params: {
+                    key: process.env.REACT_APP_CKEY
+                }
             }),
             transformResponse: (response) => response.data
         }),
