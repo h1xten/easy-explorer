@@ -45,9 +45,7 @@ const UdLogin = () => {
   return (
     <div className='ud_login'>
         {userUD ? 
-            <>
-                <ProfileMenu userLogout={userLogout} />
-            </>
+            <ProfileMenu userLogout={userLogout} />
             :
             <>
                 <Button type='primary' onClick={unstoppableLogin}>
