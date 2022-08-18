@@ -1,0 +1,21 @@
+.profile_menu:hover{
+   border: 0;
+}
+.profile_menu>div{
+    font-size: 1rem;
+}
+.ant-space-item{
+    display: flex;
+    align-items: center;
+}
+.profile_dropdown_menu>ul>li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+}
+.profile_dropdown_menu>ul>li p{
+    letter-spacing: 1px;
+    padding: 3px 3px;
+    margin: 0;
+}

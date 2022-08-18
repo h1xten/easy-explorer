@@ -5,6 +5,7 @@ import UAuth from '@uauth/js'
 import { clearUD, setCurrentUD, setUserUD } from '../../store/udSlice'
 import { Button } from 'antd'
 import ProfileMenu from './ProfileMenu'
+import './UD.css'
 
 const UdLogin = () => {
     const dispatch = useDispatch()
@@ -45,7 +46,7 @@ const UdLogin = () => {
   return (
     <div className='ud_login'>
         {userUD ? 
-            <ProfileMenu userLogout={userLogout} />
+            <ProfileMenu userLogout={userLogout}/>
             :
             <>
                 <Button type='primary' onClick={unstoppableLogin}>
