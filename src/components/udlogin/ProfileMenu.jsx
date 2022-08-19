@@ -1,5 +1,5 @@
 import { DownOutlined} from '@ant-design/icons';
-import { Button, Dropdown, Menu, Space } from 'antd';
+import { Dropdown, Menu, Space } from 'antd';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -39,12 +39,12 @@ const ProfileMenu = ({userLogout}) => {
 
   return (
     <Dropdown overlayClassName='profile_dropdown_menu' overlay={menu} className = 'profile_menu'>
-        <a onClick={(e) => e.preventDefault()}>
+        <p onClick={(e) => e.preventDefault()}>
             <Space>
                 {userSub}
                 <DownOutlined />
             </Space>
-        </a>
+        </p>
     </Dropdown>
   )
 }

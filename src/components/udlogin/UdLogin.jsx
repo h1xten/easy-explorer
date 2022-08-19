@@ -48,11 +48,9 @@ const UdLogin = () => {
         {userUD ? 
             <ProfileMenu userLogout={userLogout}/>
             :
-            <>
-                <Button type='primary' onClick={unstoppableLogin}>
-                    Login with Unstoppable
-                </Button>
-            </>
+            <Button type='primary' onClick={unstoppableLogin}>
+                Login with Unstoppable
+            </Button>
         }
     </div>
   )

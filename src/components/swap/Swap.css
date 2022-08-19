@@ -1,0 +1,18 @@
+.swap_modal>.ant-modal-content {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+.swap_modal>.ant-modal-content ul {
+    padding-left: 0 !important;
+}
+.hyphen_btn{
+    position: fixed !important;
+    z-index: 100 !important;
+    bottom: 3rem;
+    right: 0.8rem;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+.hyphen_btn:hover{
+    background-color: darkred;
+}
