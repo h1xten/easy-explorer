@@ -1,7 +1,7 @@
 import { ArrowLeftOutlined } from '@ant-design/icons/lib/icons'
 import React from 'react'
 import { Button } from 'antd'
-import { NavLink, useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import {} from 'react-router-dom'
 import { useGetTransactionQuery } from '../../../store/covalentApi'
 import Loader from '../../loader/Loader'
@@ -11,7 +11,7 @@ const Transaction = () => {
     const { hash, chain_id } = useParams()
     const navigate = useNavigate()
     
-    const {data: tx, isLoading, isError, error} = useGetTransactionQuery({chain_id, hash})
+    const {data: tx, isLoading} = useGetTransactionQuery({chain_id, hash})
     if(isLoading) return <Loader />
     
     const backHandle = () => {
