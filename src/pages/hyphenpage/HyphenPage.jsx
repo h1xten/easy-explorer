@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import * as HyphenWidget from "@biconomy/hyphen-widget";
 import "@biconomy/hyphen-widget/dist/index.css";
 
-const Swap = () => {
+const HyphenPage = () => {
     const [hyphenWidget, setHyphenWidget] = useState();
 
     useEffect(() => {
@@ -14,6 +14,7 @@ const Swap = () => {
             env: 'test',
             dAppName: "EasyExplorer",
             showWidget: true,
+            showCloseButton: false,
         }
         );
 
@@ -21,10 +22,16 @@ const Swap = () => {
         setHyphenWidget(widget);
         }
     }, []);
-
   return (
-    <div id="widget"></div>
+    <div className='hyphen-page'>
+        <div className='wrapper widget-container'>
+            <div className='hyphen__content'>
+                <h4>Hyphen Widget</h4>
+                <div id="widget"></div>
+            </div>
+        </div>
+    </div>
   )
 }
 
-export default Swap
+export default HyphenPage

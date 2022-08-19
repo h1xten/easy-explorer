@@ -16,3 +16,23 @@
 .hyphen_btn:hover{
     background-color: darkred;
 }
+.widget-container{
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+.hyphen__content{
+    align-items: center;
+    justify-content: center;
+}
+.hyphen__content>h4{
+    text-align: center;
+    user-select: none;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}

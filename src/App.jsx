@@ -5,6 +5,7 @@ import Address from './pages/address/Address';
 import Transaction from './components/transactions/transaction/Transaction';
 import 'antd/dist/antd.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import HyphenPage from './pages/hyphenpage/HyphenPage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
                 } />
                 <Route path = 'transaction/:hash/:chain_id' element = {
                     <Transaction/>
+                } />
+                <Route path = '/hyphen-bridge' element ={
+                    <HyphenPage />
                 } />
             </Route>
         </Routes>
